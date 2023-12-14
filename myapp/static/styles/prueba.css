@@ -1,0 +1,11 @@
+.centered {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+td, th {
+    border-width: 1px;
+    color:white ;
+}
+body{
+    background-color: #1F242D;
+}

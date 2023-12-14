@@ -1,0 +1,70 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordWise</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css"/>
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/styleDesarollo.css' %}">
+</head>
+<body class="ancho100 centrar">
+    <nav class="contentNavB">
+        <a href="/seleccion/"><i class="bi bi-person-fill perfil"></i></a>
+    </nav>
+    <main class="ancho100 cuerpoSeleccionPrincipal">
+        <section class="expCont seleccionLeft ancho1002 centrar ">
+            <h1 class="tituloQue">superlativos</h1>
+            <div class="contentTexto">
+                <p>Los superlativos son como medallas que usamos para decir qué es el más grande, el más rápido, el más alto, etc. Cuando comparamos más de dos cosas y queremos señalar la mejor o la peor, usamos superlativos.</p>
+                
+
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="table-responsive">
+                                <table id="datatable-adjetivos" class="table table-hover border border-white" >
+                                    <p>Algunos ejemplos</p>
+                                    <thead>
+                                        <tr>
+                                            <th class="centered">#</th>
+                                            <th class="centered">Adjetivo</th>
+                                            <th class="centered">Comparativo</th>
+                                            <th class="centered">Superlativo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBody_adjetivos"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            </div>
+            <a id="botonSiguiente1" class="boton centrar" href="/ejemplossuperlativos/">siguiente</a>        
+        </section>
+    </main>
+    <footer class="bienvenidaPie centrar">
+        <div class="footerContenI">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-tiktok"></i>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384 kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+        <script src=" {% static 'js/prueba4.js' %}"></script>
+        
+</body>
+</html>

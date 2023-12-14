@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,300;1,700&display=swap');
+:root{
+    --fondo: #0D0D0D;
+    --colorBtn: #404040;
+    --colorFuente: #298DD6;
+    --fuente: 'Comic Neue', cursive;
+    --colorBlanco: #F2F2F2;
+}
+/*---------------------general*/
+.perfil{
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.3rem);
+    border: 1.5px solid rgba(0, 0, 0, 0.3);
+    padding: 0.6rem;
+    border-radius: 20%;
+    
+}
+/*Variables*/
+.boton{
+    padding: 1rem;
+    background-color: var(--colorBtn);
+    border-radius: 0.7rem;
+    border: solid 0.1px var(--fondo);
+    transition: 0.5s;
+    color: var(--colorFuente);
+    cursor: pointer;
+}
+#botonSiguiente1{
+    margin-top: 1rem;
+    width: 50%;
+}
+#botonSiguiente1:hover{
+    width: 60%;
+}
+/*-----------------------------------------------------------------*/
+.footerContenI{
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.3rem);
+    border: 1.5px solid rgba(0, 0, 0, 0.3);
+    padding: 0.6rem;
+    border-radius: 25px;
+}
+.seleccionLeft{
+    flex-direction: column;
+}
+.seleccionLeft .boton{
+    width: 80%;
+    height: 5rem;
+    border-radius: 50px;
+    font-size: 15pt;
+    font-weight: bold;
+    /*font-size: 100%;*/
+    text-align: center;
+}
+.seleccionLeft .boton:not(:last-child){
+    margin-bottom: 2rem;
+}
+/*-----------Hover*/
+.boton:hover{
+    border-color: white;
+    padding: 2.5rem;
+    width: 90%;
+    color: var(--colorBlanco);
+}
+
+/*################################################que es*/
+.tituloQue{
+    font-size: 40pt;
+    margin-bottom: 10px;
+}
+.expCont .contentTexto{
+    width: 80%;
+    padding: 3rem;
+    font-size: 25pt;
+    max-width: 85%;
+    border-radius: 50px;
+    border: solid var(--colorFuente);
+    
+    
+}
+.expCont .contentTexto li:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+/*###############---ADAPTABLE----###################*/
+@media (max-width: 500px){
+    .tituloQue{
+        font-size: 30pt;
+    }
+    .expCont .contentTexto{
+        font-size: 20pt;
+        max-width: 90%;
+    }
+    #botonSiguiente1{
+        margin-top: 1rem;
+        width: 90%;
+        height: 3rem;
+    }
+    #botonSiguiente1:hover{
+        width: 90%;
+        height: 3rem;
+    }
+}

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/styles/style2.css' %}">
+</head>
+<body class="ancho100">
+    <div class="container centrar">
+        <div class="bubbles centrar">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+        </div>
+    </div>
+{% if pregunta is None %}
+<div id="hola" class="container mensajeFeliz ancho1002 centrar">
+    <div class="jumbotron my-4 ancho1002 centrar">
+        <h1>
+            Terminaste nuestra prueba, felicitaciones
+        </h1>
+        <a href="/puntajes/" class="btn centrar">VER CALIFICACION</a>
+    </div>
+</div>
+{% else %}
+<div class="container mensajeResol centrar ancho1002">
+    <div class="jumbotron my-4 centrar">
+        <h3 class="resolPregunta">
+            {{pregunta.texto}}
+        </h3>
+        <form method="POST" class="form centrar formularioSelecion">
+            {% csrf_token %}
+            <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}">
+
+            {% for opciones in pregunta.opciones.all %}
+                <p>
+                <input class="form-check-input" type="radio" name="respuesta_pk" value="{{opciones.pk}}" id="choice-{{forloop.counter}}">
+                <label id="opcion" class="form-check-label" for="choice-{{forloop.counter}}">
+                    {{opciones.texto}}
+                </label>
+                </p>
+            {% endfor %}
+            <button type="submit" class="btn btn-success centrar" >Enviar</button>
+
+        </form>
+    </div>
+</div>
+{% endif %}
+</body>
+</html>

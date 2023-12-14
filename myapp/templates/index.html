@@ -1,0 +1,79 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordWise</title>
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body class="cuerpoTodo ancho100">
+    
+
+
+    <div class="container">
+        <nav class="contentNavB centrar">
+            <a href="/salida/"><i class="bi bi-arrow-left"></i></a>
+        </nav>
+        <div class="bubbles centrar">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+        </div>
+    </div>
+    <main class="cuerpoBienvenida dividirRow">
+        <section class="bienvenidaSeleccion dividirRow ancho1002">
+
+            <section class="seleccionNav centrar seleccionNavRegistrar">
+                <h1>WordWise</h1>
+            </section>
+            <section class="seleccionBtns centrar">
+                <h2 class="seleccionTxt">Bienvenido a WordWise, amplía tus habilidades en inglés y sumerjete en un mundo de palabras, únete a nosotros en este viaje de descubrimiento de idiomas y elevate cada vez más.</h2>
+                <div class="btnConten centrar">
+                    <a class="btn centrar" href="/registro/">EMPIEZA AHORA</a>
+                    <a class="btn centrar" href="/ingreso/">YA TENGO CUENTA</a>
+                </div>
+            </section>
+            
+        </section>
+        <section class="bienvenidaImg ancho1002 centrar">
+            <img src="{% static 'logo(1).png' %}" alt="bienvenidaImg">
+        </section>
+    </main>
+    <footer class="bienvenidaPie centrar">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-tiktok"></i>
+    </footer>
+</body>
+</html>

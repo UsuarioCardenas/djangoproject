@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,300;1,700&display=swap');
+:root{
+    --fondo: #181b22;
+    --colorBtn: #3E4757;
+    --colorFuente: #298DD6;
+    --fuente: 'Comic Neue', cursive;
+}
+/*-------------------------------todo*/
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--colorFuente);
+    box-sizing: border-box;
+    font-family: var(--fuente);
+    text-decoration: none;
+}
+body{
+    background-color: var(--fondo);
+    overflow-x: hidden;
+}
+/*-------------------------------variables*/
+.ancho100{
+    width: 100vw;
+    height: 100vh;
+}
+.ancho1002{
+    width: 100%;
+    height: 100%;
+}
+.dividirRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    color: white;
+    border-color: var(--fondo);
+    width: 20vw;
+    height: 5rem;
+    font-size: 2vw;
+    font-weight: bolder;
+    border-radius: 50px;
+    background-color: var(--colorBtn);
+    cursor: pointer;
+    transition: 1s;
+}
+.btn:hover{
+    border-color: white;
+}
+/*-------------------------------*/
+/*diseño*/
+.bubbles{
+    position: relative;
+    width: 100%;
+    display: flex;
+    z-index: -1;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--colorFuente);
+    margin: 0 4px;
+    border-radius: 25% 1%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 
+    0 0 50px var(--colorFuente),
+    0 0 100px var(--colorFuente);
+    animation: animate 5s linear infinite;
+    animation-duration: calc(125s/var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-sizing: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate {
+    0%{
+        transform: translatey(-10vh) scale(0);
+        
+    }
+    100%{
+        transform: translatey(100vh) scale(0.5);
+    }
+    
+}
+
+/*-------------------------------body*/
+/*----------------------------------nav*/
+.contentNavB i{
+    font-size: 45pt;
+    font-weight: bolder;
+    position: fixed;
+    top: 10px;
+    left: 50px;
+    cursor: pointer;
+    animation: rotacion 1s infinite ease-in;
+    transition: 1s;
+}
+.contentNavB i:hover{
+    color: white;
+}
+@keyframes rotacion{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(10deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-10deg);}
+    75%{transform: rotate(-5deg);}
+}
+
+/*-------------------------------main*/
+.cuerpoBienvenida{
+    width: 100%;
+    height: 100%;
+}
+
+/*-------------------------------bienvenidaSeleccion*/
+.bienvenidaSeleccion{
+    border-right: 2px var(--colorFuente) solid;
+    border-radius: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+.seleccionNav{
+    font-size: 4.5vw;
+    margin-bottom: 6rem;
+}
+.seleccionBtns{
+    width: 100%;
+    flex-direction: column;
+}
+.seleccionTxt{
+    width: 90%;
+    text-align: center;
+    font-weight: lighter;
+}
+.btnConten{
+    margin-top: 50px;
+    width: 100%;
+    flex-direction: column;
+}
+.btnConten a{
+    text-align: center;
+    width: 85%;
+    border: solid 2px var(--colorBtn);
+    transition: 1s;
+}
+.btnConten a:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+
+/*-------------------------------bienvenidaImg*/
+.bienvenidaImg img{
+    width: 40vw;
+    border-radius: 10% 15px 10% 15px;
+    height: auto;
+}
+/*------------------------------bienvenidaPie*/
+.bienvenidaPie{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+}
+.bienvenidaPie i{
+    font-size: 25pt;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.bienvenidaPie i:not(:last-child){
+    margin-right: 5rem;
+}
+.bienvenidaPie i:hover{
+    font-size: 27pt;
+    color: white;
+}
+.bienvenidaPie i{
+    animation: rotacion 3s infinite ease-in;
+}
+
+/*----------------------------------------------------Regirto*/
+.seleccionNavRegistrar{
+    margin-bottom: 20px;
+}
+.seleccionTxtRegis{
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 25pt;
+}
+.registrarFormCont{
+    width: 100%;
+}
+.registrarFormCont .form{
+    width: 85%;
+}
+.formContInput h3{
+    margin-bottom: 10px;
+    font-size: 20pt;
+}
+.formContInput input{
+    padding-left: 3rem;
+    font-size: 15pt;
+    font-weight: lighter;
+    height: 4rem;
+    width: 100%;
+    cursor: text;
+}
+.formContInput input/*:not(:first-child)*/{
+    margin-bottom: 5px;
+}
+.registrarFormCont button{
+    position: relative;
+    left: 15%;
+    width: 60%;
+    margin-top: 20px;
+    height: 4rem;
+    background-color: var(--colorFuente);
+}
+.registrarFormCont button:hover{
+    color: rgb(245, 244, 244);
+}
+/*-----------------------------------------------Inicio*/
+
+
+/*----------------respon-------------------------------*/
+@media (max-width: 1000px){
+    .bienvenidaImg{
+        display: none;
+    }
+    .seleccionTxt{
+        font-size: 4vw;
+    }
+    .bienvenidaSeleccion{
+        border: none;
+    }
+    .form .seleccionBtn2{
+        font-size: 4vw;
+    }
+    .btn{
+        font-size: 3vw;
+    }
+    .seleccionNav{
+        width: 100%;
+    }
+    .seleccionNav h1{
+        width: 100%;
+        text-align: center;
+        font-size: 10vw;
+    }
+    .bienvenidaSeleccion .btnConten{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .bienvenidaSeleccion .btnConten a, .bienvenidaSeleccion .btnConten .btn{
+        width: 85%;
+
+    }
+    .bienvenidaSeleccion .btnConten .btn{
+        height: 4rem;
+    }
+}
+@media (max-width: 500px){
+    .seleccionNav h1{
+        width: 100%;
+        text-align: center;
+        font-size: 15vw;
+    }
+}

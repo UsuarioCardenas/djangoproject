@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,300;1,400&family=Poppins:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+:root{
+    --fondo: #181b22;
+    --colorBtn: #3E4757;
+    --colorFuente: #298DD6;
+    --fuente: 'Comic Neue', cursive;
+    --fuente2: 'Poppins', sans-serif;
+    --fuente3: 'Comic Neue', cursive;
+}
+/*-------------------------------todo*/
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--colorFuente);
+    box-sizing: border-box;
+    font-family: var(--fuente3);
+    text-decoration: none;
+}
+body{
+    background-color: var(--fondo);
+    overflow-x: hidden;
+}
+#cuerpo{
+    background-color: var(--fondo);
+}
+/*-------------------------------variables*/
+.ancho100{
+    width: 100vw;
+    height: 100vh;
+}
+.ancho1002{
+    width: 100%;
+    height: 100%;
+}
+.dividirRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    color: var(--colorFuente);
+    border: var(--fondo) 1px solid;
+    height: 3rem;
+    font-size: 2vw;
+    font-weight: bolder;
+    border-radius: 50px;
+    background-color: var(--colorBtn);
+    cursor: pointer;
+    transition: 1s;
+    padding: 1rem;
+}
+.btn:hover{
+    border-color: white;
+    padding: 1.1rem;
+}
+/*---------------Diseño-------------------*/
+.bubbles{
+    position: relative;
+    width: 100%;
+    display: flex;
+    z-index: -1;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--colorFuente);
+    margin: 0 4px;
+    border-radius: 25% 1%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 
+    0 0 50px var(--colorFuente),
+    0 0 100px var(--colorFuente);
+    animation: animate 5s linear infinite;
+    animation-duration: calc(150s/var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-sizing: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate {
+    0%{
+        transform: translatey(-10vh) scale(0);
+        
+    }
+    100%{
+        transform: translatey(90vh) scale(0.5);
+    }
+    
+}
+/*-------------------------*/
+.resultadoTb{
+    background-color: #298DD6;
+    border-radius: 10%;
+}
+.tituloTb{
+    text-transform: uppercase;
+}
